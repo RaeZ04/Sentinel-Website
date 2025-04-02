@@ -562,7 +562,6 @@ const navItems = [
   { id: 'getting-started', title: 'Getting Started' },
   { id: 'how-to-use', title: 'How To Use' },
   { id: 'upcoming-features', title: 'Upcoming Features' },
-  { id: 'features', title: 'Features' },
   { id: 'faq', title: 'FAQ' },
   { id: 'contact', title: 'Contact & Support' }
 ];
