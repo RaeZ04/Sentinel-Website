@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-4 flex justify-center md:justify-end">
-                                    <a href="/assets/apps/Sentinel.exe" download
+                                    <a href="/apps/Sentinel.exe" download
                                         class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-300 py-3 px-6 rounded-lg font-medium shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:translate-y-[-2px]">
                                         <i class="fas fa-download"></i>
                                         Download for Windows
@@ -193,7 +193,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-4 flex justify-center md:justify-end">
-                                    <a href="/assets/apps/Sentinel_Win64.jar" download
+                                    <a href="/apps/Sentinel_Win64.jar" download
                                         class="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-red-600 transition-all duration-300 py-3 px-6 rounded-lg font-medium shadow-lg shadow-red-500/20 hover:shadow-red-500/40 hover:translate-y-[-2px]">
                                         <i class="fas fa-download"></i>
                                         Download JAR File
