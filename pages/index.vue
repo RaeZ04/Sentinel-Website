@@ -20,10 +20,6 @@
                         class="bg-blue-500 py-4 px-8 rounded-lg text-white font-semibold transition-all duration-300 hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20 hover:translate-y-[-2px] text-center">
                         <i class="fas fa-rocket mr-2"></i> Get Started
                     </a>
-                    <NuxtLink to="/documentation#features"
-                        class="bg-[#1e293b] py-4 px-8 rounded-lg text-white font-semibold transition-all duration-300 hover:bg-[#2d3748] hover:shadow-lg hover:translate-y-[-2px] border border-[#334155] text-center">
-                        <i class="fas fa-puzzle-piece mr-2"></i> Browser Extension
-                    </NuxtLink>
                 </div>
                 <div class="mt-8 flex items-center gap-4 text-neutral-400">
                     <a href="https://github.com/RaeZ04/Sentinel" target="_blank" class="hover:text-white transition-colors">
@@ -63,12 +59,6 @@
                         :class="documentation ? 'bg-blue-500/20 text-blue-400 font-medium' : 'text-neutral-400 hover:bg-[#1c2533] hover:text-white'">
                         <i class="fas fa-book w-5"></i>
                         <span>Documentation</span>
-                    </button>
-                    <button @click="clickBrowser" 
-                        class="text-left px-4 py-3 rounded-lg transition-all duration-200 flex items-center gap-3"
-                        :class="browserExtension ? 'bg-blue-500/20 text-blue-400 font-medium' : 'text-neutral-400 hover:bg-[#1c2533] hover:text-white'">
-                        <i class="fas fa-puzzle-piece w-5"></i>
-                        <span>Browser Extension</span>
                     </button>
                 </div>
             </nav>
@@ -299,46 +289,6 @@
                         </div>
                     </div>
                 </div>
-        
-                <!-- Browser Extension Section -->
-                <div v-if="browserExtension" class="h-full flex flex-col">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-10 h-10 bg-blue-500/20 text-blue-400 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-puzzle-piece"></i>
-                        </div>
-                        <h2 class="text-white font-bold text-2xl">Browser Extension</h2>
-                    </div>
-                    
-                    <div class="bg-[#10141e] p-6 rounded-xl text-white shadow-lg">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="bg-[#1c2029] p-5 rounded-xl flex flex-col">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-[#0366D6] to-[#044289] rounded-xl flex items-center justify-center mr-4">
-                                        <i class="fab fa-chrome text-white text-2xl"></i>
-                                    </div>
-                                    <h3 class="text-lg font-bold">Chrome Extension</h3>
-                                </div>
-                                <p class="text-neutral-400 mb-4 flex-grow">Secure password autofill for Chrome and Chromium browsers.</p>
-                                <a href="/documentation#features" class="bg-[#0366D6] hover:bg-[#044289] py-2 px-4 rounded-lg text-white text-center font-medium transition-colors">
-                                    Add to Chrome
-                                </a>
-                            </div>
-                            
-                            <div class="bg-[#1c2029] p-5 rounded-xl flex flex-col">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-[#FF9216] to-[#E66000] rounded-xl flex items-center justify-center mr-4">
-                                        <i class="fab fa-firefox text-white text-2xl"></i>
-                                    </div>
-                                    <h3 class="text-lg font-bold">Firefox Add-on</h3>
-                                </div>
-                                <p class="text-neutral-400 mb-4 flex-grow">Secure password autofill for Firefox browsers.</p>
-                                <a href="/documentation#features" class="bg-[#FF9216] hover:bg-[#E66000] py-2 px-4 rounded-lg text-white text-center font-medium transition-colors">
-                                    Add to Firefox
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </div>
@@ -352,7 +302,6 @@ export default {
             activeLink: 'windows', // Valor predeterminado para las tabs
             installation: true, 
             documentation: false, 
-            browserExtension: false,
         };
     },
     mounted() {
@@ -378,7 +327,6 @@ export default {
         clickInstallation() {
             this.installation = true;
             this.documentation = false;
-            this.browserExtension = false;
             
             // Asegurarse de que haya una pestaña seleccionada
             if (!this.activeLink) {
@@ -388,12 +336,6 @@ export default {
         clickDocumentation() {
             this.installation = false;
             this.documentation = true;
-            this.browserExtension = false;
-        },
-        clickBrowser() {
-            this.installation = false;
-            this.documentation = false;
-            this.browserExtension = true;
         },
         copyToClipboard() {
             const command = "git clone https://github.com/RaeZ04/Sentinel.git";

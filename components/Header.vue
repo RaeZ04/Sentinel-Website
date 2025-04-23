@@ -4,13 +4,6 @@
             <NuxtLink to="/" class="flex items-center hover:opacity-90 transition-opacity">
                 <img src="~/assets/sentinelPM.png" alt="Logo" class="h-8 md:h-10" />
             </NuxtLink>
-            <NuxtLink to="/documentation#features" class="hidden sm:flex items-center text-xs md:text-sm text-[#37a9e2] bg-[#122d45]/80 rounded-full py-1 px-3 transition-all duration-300 hover:bg-[#183a58] hover:shadow-md hover:shadow-blue-900/20">
-                <span class="flex items-center">
-                    <i class="fas fa-puzzle-piece mr-2 text-blue-400"></i>
-                    Browser extension
-                </span>
-                <i class="fas fa-chevron-right ml-2 text-xs"></i>
-            </NuxtLink>
         </div>
         
         <div class="text-white flex items-center">
@@ -56,12 +49,6 @@
                         <i class="fab fa-github"></i> GitHub
                     </span>
                 </a>
-                <div class="mt-6 pt-6 border-t border-slate-700 w-full flex justify-center">
-                    <NuxtLink to="/documentation#features" class="flex items-center px-4 py-2 bg-[#122d45] rounded-lg text-[#37a9e2] transition-all duration-300 hover:bg-[#183a58]" @click="closeMobileMenu">
-                        <i class="fas fa-puzzle-piece mr-2"></i>
-                        Browser Extension
-                    </NuxtLink>
-                </div>
             </nav>
             
             <!-- Botón explícito de cerrar en la parte inferior -->
